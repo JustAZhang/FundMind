@@ -231,6 +231,16 @@ poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA --ollama
 run.bat --ticker AAPL,MSFT,NVDA --ollama backtest
 ```
 
+### Chinese Fund Strategy
+
+The repository includes a small utility to collect Chinese mutual fund data via [Akshare](https://github.com/akfamily/akshare) and maintain a basic portfolio. Run once to fetch the latest data and see which fund had the best recent performance:
+
+```bash
+poetry run python src/fund_strategy.py --funds 110022,260108 --once
+```
+
+Omit the `--once` flag to keep updating the data periodically (every 24 hours by default).
+
 ## Contributing
 
 1. Fork the repository
